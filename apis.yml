@@ -1,7 +1,17 @@
 aid: juno-chat
 name: Juno Chat
-description: Juno Chat is a company surfaced as a portfolio company of y-combinator and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Juno (junocompanion.com), operated by SharedGenes, Inc., is a Y Combinator-backed
+  (P26) consumer digital-health startup building an AI personal health assistant for
+  the 1B+ people living with chronic illness. The Juno mobile app (iOS and Android)
+  builds a longitudinal health profile through conversation, biometrics, and medical
+  history to deliver personalized symptom guidance, automated symptom tracking by text
+  or voice, trigger-pattern identification, and appointment-ready reports for clinicians.
+  It supports conditions including fibromyalgia, long COVID, POTS, ME/CFS, EDS,
+  endometriosis, lupus, and MS, and is informed by research from Oxford and UCL plus
+  1,000+ patient interviews. Founded in 2025 by Marshall Gould (CEO) and Isaac Tolley
+  (CTO); HIPAA-aligned infrastructure with no health data sold. Juno is a consumer app
+  and does not currently publish a public developer API, SDKs, or API documentation.
 url: https://raw.githubusercontent.com/api-evangelist/juno-chat/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +19,58 @@ x-backed-by:
 - y-combinator
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-legal-entity: SharedGenes, Inc.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://junocompanion.com/favicon.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Digital Health
+- Chronic Illness
+- AI Health Assistant
+- Symptom Tracking
+- Consumer Health
+- Mobile App
+- Y Combinator
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: Website
+  url: https://junocompanion.com/
+- type: Blog
+  url: https://junocompanion.com/blog
+- type: PrivacyPolicy
+  url: https://junocompanion.com/privacy
+- type: TermsOfService
+  url: https://junocompanion.com/terms
+- type: SignUp
+  url: https://apps.apple.com/app/juno-chronic-illness-support/id6749455368
+- type: X
+  url: https://x.com/junocompanion
+- type: LinkedIn
+  url: https://www.linkedin.com/company/junochat/
+- type: Instagram
+  url: https://www.instagram.com/junocompanion/
+- type: DomainSecurity
+  url: security/juno-chat-domain-security.yml
+apis: []
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
