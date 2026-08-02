@@ -1,17 +1,14 @@
 aid: juno-chat
-name: Juno Chat
+name: Juno
 description: >-
-  Juno (junocompanion.com), operated by SharedGenes, Inc., is a Y Combinator-backed
-  (P26) consumer digital-health startup building an AI personal health assistant for
-  the 1B+ people living with chronic illness. The Juno mobile app (iOS and Android)
-  builds a longitudinal health profile through conversation, biometrics, and medical
-  history to deliver personalized symptom guidance, automated symptom tracking by text
-  or voice, trigger-pattern identification, and appointment-ready reports for clinicians.
-  It supports conditions including fibromyalgia, long COVID, POTS, ME/CFS, EDS,
-  endometriosis, lupus, and MS, and is informed by research from Oxford and UCL plus
-  1,000+ patient interviews. Founded in 2025 by Marshall Gould (CEO) and Isaac Tolley
-  (CTO); HIPAA-aligned infrastructure with no health data sold. Juno is a consumer app
-  and does not currently publish a public developer API, SDKs, or API documentation.
+  Juno, operated by SharedGenes, Inc., is a Y Combinator-backed consumer mobile app
+  for people living with chronic and invisible illnesses. Available on iOS and Android,
+  it offers text and voice conversations, health-diary and symptom logging, pattern
+  tracking, and gentle check-ins. Juno also publishes Juno Open Health Tools, an
+  open-source set of privacy-conscious appointment-preparation and symptom-diary
+  resources. Its public, read-only Model Context Protocol server exposes five
+  consent-gated tools for organizing user-provided notes. The tools do not diagnose,
+  recommend treatment, or replace a clinician.
 url: https://raw.githubusercontent.com/api-evangelist/juno-chat/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -34,7 +31,7 @@ accessModel:
 image: https://junocompanion.com/favicon.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-08-02'
 tags:
 - Company
 - Digital Health
@@ -44,6 +41,8 @@ tags:
 - Consumer Health
 - Mobile App
 - Y Combinator
+- Model Context Protocol
+- Open Source
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -60,6 +59,16 @@ common:
   url: https://junocompanion.com/terms
 - type: SignUp
   url: https://apps.apple.com/app/juno-chronic-illness-support/id6749455368
+- type: SignUp
+  url: https://play.google.com/store/apps/details?id=com.junochat.app
+- type: GitHubRepository
+  url: https://github.com/MarshallBear1/juno-open-health-tools
+- type: Documentation
+  url: https://github.com/MarshallBear1/juno-open-health-tools/blob/main/app/README.md
+- type: MCPServer
+  url: https://registry.modelcontextprotocol.io/?q=io.github.MarshallBear1%2Fjuno-open-health-tools
+- type: DOI
+  url: https://doi.org/10.5281/zenodo.21730086
 - type: X
   url: https://x.com/junocompanion
 - type: LinkedIn
@@ -68,7 +77,29 @@ common:
   url: https://www.instagram.com/junocompanion/
 - type: DomainSecurity
   url: security/juno-chat-domain-security.yml
-apis: []
+apis:
+- aid: juno-chat:juno-open-health-tools-mcp
+  name: Juno Open Health Tools MCP Server
+  description: >-
+    Public, read-only Model Context Protocol server exposing five tools for organizing
+    user-provided symptom notes, appointment questions, pacing observations, and
+    wellbeing-support prompts. Tool calls require explicit consent confirmation. The
+    tools do not diagnose, recommend treatment, or replace a clinician.
+  humanURL: https://github.com/MarshallBear1/juno-open-health-tools
+  baseURL: https://juno-health-tools.vercel.app/api/mcp
+  tags:
+  - Model Context Protocol
+  - Open Health
+  - Read Only
+  properties:
+  - type: MCPServer
+    url: https://registry.modelcontextprotocol.io/?q=io.github.MarshallBear1%2Fjuno-open-health-tools
+  - type: Documentation
+    url: https://github.com/MarshallBear1/juno-open-health-tools/blob/main/app/README.md
+  - type: SourceCode
+    url: https://github.com/MarshallBear1/juno-open-health-tools
+  - type: DOI
+    url: https://doi.org/10.5281/zenodo.21730086
 x-enrichment:
   date: '2026-07-19'
   status: backfilled

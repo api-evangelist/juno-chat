@@ -1,5 +1,5 @@
-# Juno Chat
+# Juno
 
-Juno Chat is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Juno is a consumer mobile app for people living with chronic and invisible illnesses. This repository is the APIs.json provider profile for Juno and records its official company and store links, open-source health tools, DOI, and public Model Context Protocol server.
 
 Backed by: y-combinator
