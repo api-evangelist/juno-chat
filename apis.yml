@@ -1,24 +1,19 @@
 aid: juno-chat
 name: Juno Chat
-description: >-
-  Juno (junocompanion.com), operated by SharedGenes, Inc., is a Y Combinator-backed
-  (P26) consumer digital-health startup building an AI personal health assistant for
-  the 1B+ people living with chronic illness. The Juno mobile app (iOS and Android)
-  builds a longitudinal health profile through conversation, biometrics, and medical
-  history to deliver personalized symptom guidance, automated symptom tracking by text
-  or voice, trigger-pattern identification, and appointment-ready reports for clinicians.
-  It supports conditions including fibromyalgia, long COVID, POTS, ME/CFS, EDS,
-  endometriosis, lupus, and MS, and is informed by research from Oxford and UCL plus
-  1,000+ patient interviews. Founded in 2025 by Marshall Gould (CEO) and Isaac Tolley
-  (CTO); HIPAA-aligned infrastructure with no health data sold. Juno is a consumer app
+description: Juno (junocompanion.com), operated by SharedGenes, Inc., is a Y Combinator-backed (P26) consumer digital-health startup building
+  an AI personal health assistant for the 1B+ people living with chronic illness. The Juno mobile app (iOS and Android) builds a longitudinal
+  health profile through conversation, biometrics, and medical history to deliver personalized symptom guidance, automated symptom tracking by
+  text or voice, trigger-pattern identification, and appointment-ready reports for clinicians. It supports conditions including fibromyalgia,
+  long COVID, POTS, ME/CFS, EDS, endometriosis, lupus, and MS, and is informed by research from Oxford and UCL plus 1,000+ patient interviews.
+  Founded in 2025 by Marshall Gould (CEO) and Isaac Tolley (CTO); HIPAA-aligned infrastructure with no health data sold. Juno is a consumer app
   and does not currently publish a public developer API, SDKs, or API documentation.
 url: https://raw.githubusercontent.com/api-evangelist/juno-chat/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - y-combinator
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was portfolio-lead)
 x-legal-entity: SharedGenes, Inc.
 deliveryModel:
   model: saas
@@ -61,6 +56,22 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: LLMsTxt
+  url: llms/juno-chat-llms.txt
+- type: ToolCrosswalk
+  url: mcp/juno-chat-tool-crosswalk.yml
+- type: MCPServer
+  url: mcp/juno-chat-mcp.yml
+- type: WellKnown
+  url: well-known/juno-chat-well-known.yml
+- type: Hosts
+  url: hosts/juno-chat-hosts.yml
+- type: Vendors
+  url: vendors/juno-chat-vendors.yml
+- type: Newsroom
+  url: https://junocompanion.com/media
+- type: Documentation
+  url: https://developers.instagram.com/
 - type: Website
   url: https://junocompanion.com/
 - type: Blog
@@ -79,20 +90,41 @@ common:
   url: https://www.instagram.com/junocompanion/
 - type: DomainSecurity
   url: security/juno-chat-domain-security.yml
-apis: []
-x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
-  pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+apis:
+- name: Juno Open Health Tools MCP Server
+  humanURL: https://juno-health-tools.vercel.app/api/mcp
+  type: mcp-manifest
+  deployment:
+    mode: remote
+    verified: probed
+    endpoint: https://juno-health-tools.vercel.app/api/mcp
+  description: MCP server providing health tools such as find_symptom_words, build_health_timeline, prepare_appointment_brief, reflect_on_flare,
+    render_appointment_brief.
+  source:
+  - https://juno-health-tools.vercel.app/api/mcp
+  - https://github.com/api-evangelist/juno-chat/pull/1
+  aid: juno-chat:juno-open-health-tools-mcp-server
 x-correction-request:
   requested: '2026-09-28'
   source:
   - https://github.com/api-evangelist/juno-chat/pull/1
-  request: 'Provider PR #1 (MarshallBear1, co-founder, 2026-08-02), verified live 2026-09-28: the profile''s ''does
-    not currently publish a public developer API'' is wrong. Add API ''Juno Open Health Tools MCP Server'', MCPServer
-    https://juno-health-tools.vercel.app/api/mcp (initialize OK, 5 tools: find_symptom_words, build_health_timeline,
-    prepare_appointment_brief, reflect_on_flare, render_appointment_brief); listed in the official MCP Registry
-    as io.github.MarshallBear1/juno-open-health-tools. Documentation: the repo''s app/README.md; SourceCode and
-    GitHubRepository: the GitHub repo in the PR; DOI 10.5281/zenodo.21730086; SignUp: the Google Play listing in
-    the PR. Keep the existing sourced description (founders, conditions) -- do not take the PR''s shorter rewrite.'
+  request: 'Provider PR #1 (MarshallBear1, co-founder, 2026-08-02), verified live 2026-09-28: the profile''s ''does not currently publish a public
+    developer API'' is wrong. Add API ''Juno Open Health Tools MCP Server'', MCPServer https://juno-health-tools.vercel.app/api/mcp (initialize
+    OK, 5 tools: find_symptom_words, build_health_timeline, prepare_appointment_brief, reflect_on_flare, render_appointment_brief); listed in
+    the official MCP Registry as io.github.MarshallBear1/juno-open-health-tools. Documentation: the repo''s app/README.md; SourceCode and GitHubRepository:
+    the GitHub repo in the PR; DOI 10.5281/zenodo.21730086; SignUp: the Google Play listing in the PR. Keep the existing sourced description (founders,
+    conditions) -- do not take the PR''s shorter rewrite.'
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The MCP server provides tool listings via JSON/event-stream but no OpenAPI or other machine‑readable contract is published.
+  evidence:
+  - url: https://juno-health-tools.vercel.app/api/mcp
+    status: 200
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

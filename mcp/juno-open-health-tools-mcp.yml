@@ -1,0 +1,11 @@
+generated: '2026-09-28'
+method: probed
+source:
+  - url: https://juno-health-tools.vercel.app/api/mcp
+    status: 405
+    content_type: application/json
+    note: GET returns Method Not Allowed, indicates endpoint requires POST JSON-RPC.
+deployment:
+  mode: remote
+  verified: probed
+  endpoint: https://juno-health-tools.vercel.app/api/mcp

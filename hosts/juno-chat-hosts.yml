@@ -1,0 +1,118 @@
+generated: '2026-09-28'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 9
+  own: 2
+  other_domain: 3
+  platform: 4
+  roles:
+  - api
+  - docs
+  - identity
+  - other
+  - website
+hosts:
+- host: api.instagram.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: instagram.com
+  role: api
+  relation: other-domain
+- host: api.junocompanion.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: junocompanion.com
+  role: api
+  relation: own
+- host: apps.apple.com
+  found_by:
+  - pointer
+  - vendor-detect
+  types:
+  - SignUp
+  serves:
+  - cdn
+  vendor: fastly
+  registrable_domain: apple.com
+  role: identity
+  relation: platform
+- host: developers.instagram.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - namespace-probe
+  - contract-discovery
+  - well-known
+  types:
+  - Documentation
+  serves: []
+  title: Instagram Platform Overview | Facebook for Developers
+  status: 200
+  registrable_domain: instagram.com
+  role: docs
+  relation: other-domain
+- host: juno-health-tools.vercel.app
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - docs
+  registrable_domain: vercel.app
+  role: other
+  relation: platform
+- host: junocompanion.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Newsroom
+  - Website
+  - Blog
+  - PrivacyPolicy
+  - TermsOfService
+  serves:
+  - hosting
+  vendor: vercel
+  registrable_domain: junocompanion.com
+  role: website
+  relation: own
+- host: www.instagram.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Instagram
+  serves: []
+  registrable_domain: instagram.com
+  role: other
+  relation: other-domain
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: x.com
+  found_by:
+  - pointer
+  types:
+  - X
+  serves: []
+  registrable_domain: x.com
+  role: other
+  relation: platform

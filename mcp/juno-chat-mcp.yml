@@ -1,0 +1,8 @@
+generated: '2026-09-28'
+method: probed
+source: https://juno-health-tools.vercel.app/api/mcp
+deployment:
+  mode: remote
+  endpoint: https://juno-health-tools.vercel.app/api/mcp
+  auth: unknown
+  verified: probed

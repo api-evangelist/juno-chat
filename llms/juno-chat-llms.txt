@@ -1,0 +1,120 @@
+# Juno
+
+> Juno helps people living with chronic illness track symptoms, spot patterns, and prepare clearer reports for their doctor. Built on founder research conducted at Oxford & UCL,…
+
+Each link below is a Markdown copy of the public page. The page URL is its canonical citation URL. Send `Accept: text/markdown` to a canonical page URL to read the same content as Markdown.
+
+## Juno
+
+- [AI Safety & Crisis Protocol — Juno](https://junocompanion.com/ai-safety.md): Juno's published safety and crisis protocol: how we respond to expressions of suicidal ideation or self-harm, crisis resources, and minor safeguards.
+- [Marshall Gould — Juno co-founder and researcher](https://junocompanion.com/authors/marshall-gould.md): Marshall Gould is a Juno co-founder and researcher focused on rare-disease communities, patient communication, and practical chronic-illness support.
+- [Consumer Health Data Privacy Policy — Juno](https://junocompanion.com/consumer-health-data.md): How Juno collects, uses, and shares consumer health data, and the rights of Washington, Nevada, and Texas consumers, including appeals.
+- [Cookie Policy — Juno](https://junocompanion.com/cookies.md): What cookies and similar technologies the Juno website uses: no analytics or advertising trackers, only strictly necessary storage.
+- [Juno and the Environment: AI, Our Carbon Usage and What We Give Back](https://junocompanion.com/environment.md): AI uses electricity and water. Here is what Juno uses each month, why we are concerned, why the benefits are worth it, and how we give back twice our impact.
+- [Sample doctor-ready report | Juno](https://junocompanion.com/example-report.md): Read a five-page Juno sample report with symptom charts, medication records, appointment questions and a full 14-day log. View online or download the PDF.
+- [Juno FAQ — How the AI chronic illness health assistant works](https://junocompanion.com/faq.md): Everything you need to know about Juno: how it tracks symptoms, supported conditions, privacy, integrations, pricing, and clinical use.
+- [Juno — Your 24/7 AI Health Assistant for Chronic Illness](https://junocompanion.com/index.md): Juno helps people living with chronic illness track symptoms, spot patterns, and prepare clearer reports for their doctor. Built on founder research conducted at Oxford & UCL,…
+- [Medical advisory board | Juno](https://junocompanion.com/medical-advisory-board.md): Meet the doctors on Juno’s medical advisory board: Dr Maureen Emeagi, a GP partner in the UK, and Dr Parivrudh Sharma, a UK-trained doctor working in clinical AI.
+- [Dr Maureen Emeagi — Lead Medical Advisor at Juno](https://junocompanion.com/medical-advisory-board/maureen-emeagi.md): Dr Maureen Emeagi, MBBS BSc DRCOG MRCGP MSc, is a GP partner and medical doctor and Lead Medical Advisor on Juno’s medical advisory board.
+- [Dr Parivrudh Sharma — Medical Advisor at Juno](https://junocompanion.com/medical-advisory-board/parivrudh-sharma.md): Dr Parivrudh Sharma, MBChB BSc MSc, is a doctor and health-data scientist and Medical Advisor on Juno’s medical advisory board.
+- [Privacy Policy — Juno](https://junocompanion.com/privacy.md): How Juno protects your health data: GDPR rights, HIPAA-grade security, AI processing, zero data retention, service providers, exports and deletion.
+- [Terms of Service — Juno](https://junocompanion.com/terms.md): The terms that govern your use of Juno. Last updated September 28, 2026.
+
+## appointments and advocacy
+
+- [High ESR and CRP Blood Tests: What Inflammation Signals | Juno](https://junocompanion.com/blog/appointments-and-advocacy/high-esr-and-crp-blood-tests.md): What raised ESR and CRP results mean, why the two markers often disagree, and how to track symptoms alongside blood work before your next specialist appointment.
+- [How To Navigate Medical Gaslighting | Juno](https://junocompanion.com/blog/appointments-and-advocacy/how-to-navigate-medical-gaslighting.md): Feeling dismissed by a doctor? Learn how to describe symptoms, ask about clinical reasoning, document next steps, and prepare a clear appointment summary.
+- [Preparing for a Medical Appointment When You Have Brain Fog | Juno](https://junocompanion.com/blog/appointments-and-advocacy/medical-appointment-with-brain-fog.md): Prepare for doctor visits when dealing with chronic illness brain fog. Use our practical checklist to reduce cognitive load and advocate with confidence.
+- [Why Are My Blood Tests Normal When I Feel So Sick? | Juno](https://junocompanion.com/blog/appointments-and-advocacy/normal-blood-tests-feel-sick.md): Discover why routine blood tests look normal when you feel sick, and learn how tracking functional impact can help you advocate for a proper diagnosis.
+- [How to Present Your Case to a New Specialist | Juno](https://junocompanion.com/blog/appointments-and-advocacy/present-your-case-to-a-specialist.md): How to prepare for a first specialist appointment with a chronic illness: a one-page summary, six symptom dimensions, flare patterns and a short prioritised question list.
+
+## Juno blog
+
+- [Appointments and advocacy | Juno blog](https://junocompanion.com/blog/appointments-and-advocacy.md): Preparing for appointments, building doctor-ready summaries, and making day-to-day impact visible.
+- [Flares and triggers | Juno blog](https://junocompanion.com/blog/flares-and-triggers.md): How to log flares and compare repeated entries before deciding what may be a trigger.
+- [Juno Blog — Chronic illness tracking, pacing and advocacy](https://junocompanion.com/blog.md): Practical articles from Juno on symptom tracking, pacing, medical appointments, and living with chronic illness.
+- [Living with chronic illness | Juno blog](https://junocompanion.com/blog/living-with.md): Condition-specific daily life, work, relationships, support, and benefits guidance.
+- [Pacing and energy | Juno blog](https://junocompanion.com/blog/pacing-and-energy.md): Practical pacing, energy-envelope, post-exertional malaise, rest, and recovery guidance.
+- [Symptom tracking | Juno blog](https://junocompanion.com/blog/symptom-tracking.md): What to record, how to record it, and how to make one week comparable with the next.
+- [Treatments and medication | Juno blog](https://junocompanion.com/blog/treatments-and-medication.md): Tracking medication timing, side effects, treatment response, and questions for clinicians.
+
+## flares and triggers
+
+- [How to Track Lupus Triggers: UV, Stress, and Weather | Juno](https://junocompanion.com/blog/flares-and-triggers/how-to-track-lupus-triggers.md): Learn how to track lupus symptoms against UV exposure, weather changes and stress while accounting for delayed flares.
+
+## pacing and energy
+
+- [Delayed Post-Exertional Malaise: How to Spot Your PEM Window | Juno](https://junocompanion.com/blog/pacing-and-energy/delayed-post-exertional-malaise-how-to-spot-your-pem-window.md): Learn how delayed post-exertional malaise can follow activity by 12 to 48 hours, how to spot your PEM window, and how activity notes can support pacing.
+- [Energy Pacing for Chronic Illness: How to Manage Your Energy and Prevent Crashes | Juno](https://junocompanion.com/blog/pacing-and-energy/energy-pacing-prevent-crashes.md): Learn how to use energy pacing to manage chronic illness, budget your energy levels daily, avoid post-exertional malaise, and prevent symptom flares.
+- [Energy Pacing with Juno: Plan Around the Day You Have | Juno](https://junocompanion.com/blog/pacing-and-energy/energy-pacing-with-juno.md): Use Juno to plan daily activities around limited energy, understand spoon estimates and keep symptom context together, with practical pacing examples to try.
+- [Why Do I Crash 24 Hours After Activity? PEM Explained | Juno](https://junocompanion.com/blog/pacing-and-energy/why-do-i-crash-24-hours-after-activity.md): Understand delayed PEM after activity, what research does and does not explain, possible warning signs, and ways to record symptoms and support pacing.
+
+## symptom tracking
+
+- [How Juno Uses Medical Knowledge and Your Health History | Juno](https://junocompanion.com/blog/symptom-tracking/how-juno-uses-health-information.md): Learn how Juno combines curated health information with your symptom history, keeps evidence separate from experience, and helps you prepare better questions.
+- [Symptom Patterns with Juno: Turn Daily Notes into Useful Clues | Juno](https://junocompanion.com/blog/symptom-tracking/symptom-patterns-with-juno.md): See how Juno brings symptoms, sleep and daily context together. Learn to spot useful patterns, check the evidence and prepare clearer questions for your doctor.
+- [Track Symptoms by Voice with Juno: Your Words, a Clearer History | Juno](https://junocompanion.com/blog/symptom-tracking/track-symptoms-by-voice-with-juno.md): Track symptoms by voice or text with Juno. Capture timing, daily impact and context in your own words, then build a clearer history for medical appointments.
+- [How to Track Symptoms Without Making It a Full-Time Job | Juno](https://junocompanion.com/blog/symptom-tracking/track-symptoms-without-burnout.md): Learn how to track chronic symptoms without the cognitive fatigue. Discover low-burden methods, quick check-ins, and doctor-ready summaries with Juno.
+
+## treatments and medication
+
+- [Illness Flare Up or Side Effect to Medication? How to Differentiate Your Symptoms | Juno](https://junocompanion.com/blog/treatments-and-medication/flare-or-medication-side-effect.md): How to tell a chronic illness flare from a medication side effect using onset timing, symptom domains and functional impact, then bring the evidence to your clinician.
+
+## Chronic illness support
+
+- [Ankylosing Spondylitis Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/ankylosing-spondylitis.md): Track ankylosing spondylitis back pain, morning stiffness, fatigue, and biologic response with Juno.
+- [Arthritis Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/arthritis.md): Track joint pain, stiffness, swelling, and mobility with Juno.
+- [Chronic Pain Tracker | Juno](https://junocompanion.com/chronic-illness-support/chronic-pain.md): Track chronic pain, triggers, treatments, and daily patterns with Juno.
+- [CRPS Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/complex-regional-pain-syndrome.md): Track CRPS pain, allodynia, swelling, temperature changes, and rehabilitation progress with Juno.
+- [Crohn's Disease Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/crohns-disease.md): Track Crohn's disease bowel symptoms, flares, food, weight, and biologic response with Juno.
+- [EDS Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/ehlers-danlos-syndrome.md): Track Ehlers-Danlos Syndrome joint instability, pain, fatigue, and overlapping conditions with Juno.
+- [Endometriosis Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/endometriosis.md): Track pelvic pain, cycle symptoms, bleeding, and flares with Juno — built around the variability of endometriosis.
+- [Fibromyalgia Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/fibromyalgia.md): Track fibromyalgia symptoms, flares, pain, fatigue, and sleep patterns with Juno. Built around the day-to-day variation that fibromyalgia involves.
+- [Gastroparesis Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/gastroparesis.md): Track gastroparesis nausea, fullness, food triggers, weight, and treatment response with Juno.
+- [Hashimoto's Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/hashimotos-thyroiditis.md): Track Hashimoto's symptoms, levothyroxine response, fatigue, and pattern shifts with Juno.
+- [Chronic illness support — symptom tracking by condition | Juno](https://junocompanion.com/chronic-illness-support.md): Juno supports people living with chronic illness. Browse condition-aware symptom trackers for fibromyalgia, POTS, ME/CFS, endometriosis, lupus, arthritis, migraine, IBS, EDS,…
+- [IBS Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/irritable-bowel-syndrome.md): Track IBS symptoms, food, stress, and digestive patterns with Juno.
+- [Long COVID Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/long-covid.md): Track long COVID fatigue, post-exertional malaise, brain fog, breathing changes, and patterns with Juno.
+- [Lupus Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/lupus.md): Track lupus fatigue, joint pain, rashes, flares, and triggers with Juno.
+- [MCAS Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/mast-cell-activation-syndrome.md): Track MCAS triggers, flares, multi-system symptoms, and medication response with Juno.
+- [ME/CFS Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/me-cfs.md): Track ME/CFS fatigue, post-exertional malaise (PEM), sleep, and energy patterns with Juno.
+- [Migraine Tracker | Juno](https://junocompanion.com/chronic-illness-support/migraines.md): Track migraine attacks, aura, triggers, and recovery with Juno.
+- [MS Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/multiple-sclerosis.md): Track multiple sclerosis fatigue, mobility, sensation, vision, and disease-modifying therapy notes with Juno.
+- [PCOS Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/polycystic-ovary-syndrome.md): Track PCOS cycle, mood, weight, skin, and treatment response with Juno.
+- [POTS Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/pots.md): Track POTS symptoms, heart rate notes, hydration, posture-related changes, and daily patterns with Juno.
+- [Psoriatic Arthritis Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/psoriatic-arthritis.md): Track psoriatic arthritis joint pain, enthesitis, dactylitis, skin flares, and biologic response with Juno.
+- [Sjögren's Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/sjogrens-syndrome.md): Track Sjögren's dryness, fatigue, joint pain, and systemic symptoms with Juno.
+- [Chronic illness symptom tracker | Juno](https://junocompanion.com/chronic-illness-support/tracker/symptoms.md): Track symptoms, flares, triggers, medication, pain, fatigue, sleep, mood, and appointment notes with Juno's chronic illness symptom tracker.
+- [Ulcerative Colitis Symptom Tracker | Juno](https://junocompanion.com/chronic-illness-support/ulcerative-colitis.md): Track ulcerative colitis bowel patterns, blood, urgency, flares, and biologic response with Juno.
+
+## Compare Juno
+
+- [Compare Juno with Bearable and Visible | Juno](https://junocompanion.com/compare.md): Compare Juno with Bearable and Visible for symptom tracking, health patterns, pacing and appointment reports. Find the app that fits your needs.
+
+## App comparisons
+
+- [Juno vs Bearable (2026): Symptom Tracking Compared | Juno](https://junocompanion.com/compare/juno-vs-bearable.md): Compare Juno and Bearable for symptom logging, voice, health patterns, appointment reports and pricing. Choose the app that fits your energy and routine.
+- [Visible vs Juno (2026): Pacing and Symptom Tracking | Juno](https://junocompanion.com/compare/juno-vs-visible.md): Juno is your 24/7 personal health assistant for chronic illness. Compare condition support, pattern analysis, band requirements and importing Visible symptoms.
+
+## Free Juno resource
+
+- [Free Doctor Appointment Preparation Sheet (One Page) | Juno](https://junocompanion.com/free-resources-and-worksheets/appointment-one-pager.md): Download a free one-page appointment preparation sheet: what changed, three priorities, current symptoms and treatments, questions, and the agreed plan.
+- [Free Energy and Fatigue Tracker Worksheet | Juno](https://junocompanion.com/free-resources-and-worksheets/energy-fatigue-tracker.md): Download a free energy and fatigue tracker to log fatigue, sleep, exertion, pacing, crashes, and recovery patterns.
+- [Free Feelings Wheel PDF | Juno](https://junocompanion.com/free-resources-and-worksheets/feelings-wheel.md): Download a free feelings wheel to name emotions more clearly during check-ins, journaling, therapy, or symptom tracking.
+- [Free Flare Episode Log Worksheet | Juno](https://junocompanion.com/free-resources-and-worksheets/flare-episode-log.md): Download a free flare episode log to track flare onset, symptoms, possible triggers, recovery, and notes.
+- [Free Food Symptom Log Worksheet | Juno](https://junocompanion.com/free-resources-and-worksheets/food-symptom-log.md): Download a free food symptom log to track meals, symptoms, timing, suspected triggers, and digestive patterns.
+- [Free chronic illness worksheets and resources | Juno](https://junocompanion.com/free-resources-and-worksheets.md): Free printable chronic illness worksheets for symptom logs, flares, mood, energy, food, trigger tracking, treatment notes, and mental health check-ins.
+- [Free Mental Health Check-In Worksheet | Juno](https://junocompanion.com/free-resources-and-worksheets/mental-health-check-ins.md): Download a free mental health check-in worksheet to reflect on mood, stress, needs, support, and next steps.
+- [Free Mood Tracker Worksheet | Juno](https://junocompanion.com/free-resources-and-worksheets/mood-tracker.md): Download a free mood tracker worksheet to log mood, energy, sleep, stress, symptoms, and patterns over time.
+- [Free Symptom Tracker Worksheet | Juno](https://junocompanion.com/free-resources-and-worksheets/symptom-tracker.md): Download a free symptom tracker worksheet to log daily and monthly symptoms, severity, patterns, and notes for appointments.
+- [Free Treatment Tracker Worksheet | Juno](https://junocompanion.com/free-resources-and-worksheets/treatment-tracker.md): Download a free treatment tracker worksheet to monitor treatments, response, side effects, and questions for your clinician.
+- [Free Trigger Tracker Worksheet (Identify Symptom Triggers) | Juno](https://junocompanion.com/free-resources-and-worksheets/trigger-tracker.md): Download a free trigger tracker worksheet to identify what causes symptom spikes. Track patterns across sleep, stress, food, and more.
+- [Chronic illness trackers | Juno](https://junocompanion.com/trackers.md): Compare chronic illness trackers for symptoms, flares, triggers, treatments, medication, pain, fatigue, food, mood, and sleep.
+
+## Juno in the press
+
+- [Juno in the press | Juno](https://junocompanion.com/media.md): Published stories, profiles and customer stories about Juno, the health assistant for chronic illness.
+
+## The Juno story
+
+- [The Juno story — built from chronic illness, for chronic illness](https://junocompanion.com/story.md): A note from Marshall, Juno's founder, on living with Myalgic Encephalomyelitis and why no one with a chronic illness should have to navigate it alone.

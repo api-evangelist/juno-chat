@@ -1,0 +1,45 @@
+generated: '2026-09-28'
+method: probed
+source:
+  - https://junocompanion.com/privacy
+signals:
+  data_subject_request:
+    evidence:
+      - source: https://junocompanion.com/privacy
+        http_status: 200
+        fetched: /tmp/juno_privacy.html
+        quote: "GDPR and UK GDPR: clear legal bases, consent for health data and rights to access, correct, export or delete your information."
+        section: "Your data, in plain language"
+        note: Provides data subject rights to access, correct, export, delete.
+  subprocessors:
+    evidence:
+      - source: https://junocompanion.com/privacy
+        http_status: 200
+        fetched: /tmp/juno_privacy.html
+        quote: "No sale of health data: we do not sell it or share it for advertising."
+        section: "Your data, in plain language"
+        note: States no sharing for advertising; mentions service providers elsewhere.
+  ai_transparency:
+    evidence:
+      - source: https://junocompanion.com/privacy
+        http_status: 200
+        fetched: /tmp/juno_privacy.html
+        quote: "No AI training: your health conversations, symptoms and documents are not used to train AI models."
+        section: "Your data, in plain language"
+        note: Declares that user data is not used to train AI.
+  data_residency:
+    evidence:
+      - source: https://junocompanion.com/privacy
+        http_status: 200
+        fetched: /tmp/juno_privacy.html
+        quote: "Data controller: Sharedgenes, Inc., a Delaware corporation in the United States (\"Sharedgenes\", \"we\", \"us\" or \"our\"), is responsible for the personal data described here."
+        section: "Privacy Policy — Juno"
+        note: Indicates data controller located in United States.
+  data_retention:
+    evidence:
+      - source: https://junocompanion.com/privacy
+        http_status: 200
+        fetched: /tmp/juno_privacy.html
+        quote: "Zero data retention: eligible AI-provider requests use ZDR arrangements. Juno still saves the history you need for ongoing support."
+        section: "Your data, in plain language"
+        note: Claims zero retention for eligible requests, but retains history for support.
