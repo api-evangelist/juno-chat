@@ -85,3 +85,14 @@ x-enrichment:
   status: backfilled
   pass: local-v1
   note: backfilled from .gitignore signal + verified work evidence
+x-correction-request:
+  requested: '2026-09-28'
+  source:
+  - https://github.com/api-evangelist/juno-chat/pull/1
+  request: 'Provider PR #1 (MarshallBear1, co-founder, 2026-08-02), verified live 2026-09-28: the profile''s ''does
+    not currently publish a public developer API'' is wrong. Add API ''Juno Open Health Tools MCP Server'', MCPServer
+    https://juno-health-tools.vercel.app/api/mcp (initialize OK, 5 tools: find_symptom_words, build_health_timeline,
+    prepare_appointment_brief, reflect_on_flare, render_appointment_brief); listed in the official MCP Registry
+    as io.github.MarshallBear1/juno-open-health-tools. Documentation: the repo''s app/README.md; SourceCode and
+    GitHubRepository: the GitHub repo in the PR; DOI 10.5281/zenodo.21730086; SignUp: the Google Play listing in
+    the PR. Keep the existing sourced description (founders, conditions) -- do not take the PR''s shorter rewrite.'
