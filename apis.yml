@@ -5,8 +5,10 @@ description: Juno (junocompanion.com), operated by SharedGenes, Inc., is a Y Com
   health profile through conversation, biometrics, and medical history to deliver personalized symptom guidance, automated symptom tracking by
   text or voice, trigger-pattern identification, and appointment-ready reports for clinicians. It supports conditions including fibromyalgia,
   long COVID, POTS, ME/CFS, EDS, endometriosis, lupus, and MS, and is informed by research from Oxford and UCL plus 1,000+ patient interviews.
-  Founded in 2025 by Marshall Gould (CEO) and Isaac Tolley (CTO); HIPAA-aligned infrastructure with no health data sold. Juno is a consumer app
-  and does not currently publish a public developer API, SDKs, or API documentation.
+  Founded in 2025 by Marshall Gould (CEO) and Isaac Tolley (CTO); HIPAA-aligned infrastructure with no health data sold. Juno also publishes
+  Juno Open Health Tools, an MIT-licensed remote MCP server at https://juno-health-tools.vercel.app/api/mcp with five read-only, consent-gated
+  tools that turn a user's non-identifying health notes into non-diagnostic appointment-preparation material; it is listed in the official MCP
+  Registry and archived on Zenodo (DOI 10.5281/zenodo.21730086). Juno publishes no REST API or SDK.
 url: https://raw.githubusercontent.com/api-evangelist/juno-chat/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -71,7 +73,13 @@ common:
 - type: Newsroom
   url: https://junocompanion.com/media
 - type: Documentation
-  url: https://developers.instagram.com/
+  url: https://github.com/MarshallBear1/juno-open-health-tools/blob/main/app/README.md
+- type: SourceCode
+  url: https://github.com/MarshallBear1/juno-open-health-tools
+- type: GitHubRepository
+  url: https://github.com/MarshallBear1/juno-open-health-tools
+- type: DOI
+  url: https://doi.org/10.5281/zenodo.21730086
 - type: Website
   url: https://junocompanion.com/
 - type: Blog
@@ -82,6 +90,8 @@ common:
   url: https://junocompanion.com/terms
 - type: SignUp
   url: https://apps.apple.com/app/juno-chronic-illness-support/id6749455368
+- type: SignUp
+  url: https://play.google.com/store/apps/details?id=com.junochat.app
 - type: X
   url: https://x.com/junocompanion
 - type: LinkedIn
@@ -91,19 +101,34 @@ common:
 - type: DomainSecurity
   url: security/juno-chat-domain-security.yml
 apis:
-- name: Juno Open Health Tools MCP Server
-  humanURL: https://juno-health-tools.vercel.app/api/mcp
-  type: mcp-manifest
-  deployment:
-    mode: remote
-    verified: probed
-    endpoint: https://juno-health-tools.vercel.app/api/mcp
-  description: MCP server providing health tools such as find_symptom_words, build_health_timeline, prepare_appointment_brief, reflect_on_flare,
-    render_appointment_brief.
-  source:
-  - https://juno-health-tools.vercel.app/api/mcp
-  - https://github.com/api-evangelist/juno-chat/pull/1
-  aid: juno-chat:juno-open-health-tools-mcp-server
+- aid: juno-chat:juno-open-health-tools-mcp-server
+  name: Juno Open Health Tools MCP Server
+  description: Remote streamable-HTTP MCP server (serverInfo Juno Health Tools 1.1.0) with five read-only, consent-gated tools
+    (find_symptom_words, build_health_timeline, prepare_appointment_brief, reflect_on_flare, render_appointment_brief) that organise a user's
+    non-identifying health notes into symptom vocabulary, timelines, flare reflections and an appointment brief, plus one UI resource for the
+    rendered brief. Each call requires consentConfirmed true; the server declines PHI and does not diagnose. No credentials required. Listed in
+    the official MCP Registry as io.github.MarshallBear1/juno-open-health-tools; MIT-licensed source on GitHub.
+  humanURL: https://github.com/MarshallBear1/juno-open-health-tools
+  baseURL: https://juno-health-tools.vercel.app/api/mcp
+  tags:
+  - MCP
+  - Digital Health
+  - Symptom Tracking
+  properties:
+  - type: MCPServer
+    url: mcp/juno-chat-mcp.yml
+  - type: ToolCrosswalk
+    url: mcp/juno-chat-tool-crosswalk.yml
+  - type: Documentation
+    url: https://github.com/MarshallBear1/juno-open-health-tools/blob/main/app/README.md
+  - type: SourceCode
+    url: https://github.com/MarshallBear1/juno-open-health-tools
+  - type: GitHubRepository
+    url: https://github.com/MarshallBear1/juno-open-health-tools
+  - type: MCPRegistry
+    url: https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MarshallBear1/juno-open-health-tools
+  - type: DOI
+    url: https://doi.org/10.5281/zenodo.21730086
 x-correction-request:
   requested: '2026-09-28'
   source:
@@ -114,6 +139,8 @@ x-correction-request:
     the official MCP Registry as io.github.MarshallBear1/juno-open-health-tools. Documentation: the repo''s app/README.md; SourceCode and GitHubRepository:
     the GitHub repo in the PR; DOI 10.5281/zenodo.21730086; SignUp: the Google Play listing in the PR. Keep the existing sourced description (founders,
     conditions) -- do not take the PR''s shorter rewrite.'
+  applied: '2026-10-03'
+  applied_note: 'Hand-applied after the local re-profile ignored this block; re-verified live 2026-10-03. Applied: the "does not currently publish a public developer API" sentence replaced with a sourced sentence on the MCP server (the founder/conditions description is kept); MCP API entry rebuilt in properties form with baseURL https://juno-health-tools.vercel.app/api/mcp; mcp/juno-chat-mcp.yml rebuilt from live initialize, tools/list (5 tools with descriptions, annotations, input schemas) and resources/list (1 UI resource); tool crosswalk records all five as MCP-only; Documentation (app/README.md, replacing a developers.instagram.com link that was not Juno documentation), SourceCode and GitHubRepository (MarshallBear1/juno-open-health-tools, MIT), DOI 10.5281/zenodo.21730086 (registered; DataCite lists it as software version 1.3.0 by Gould and Tolley; zenodo.org answers 403 to this crawler), SignUp (Google Play com.junochat.app, 200), MCPRegistry (active, 1.1.0). Not changed: hosts/, vendors/ and well-known/ still list developers.instagram.com from the old Documentation pointer until the next pipeline pass; x-coverage left as the pipeline wrote it.'
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec

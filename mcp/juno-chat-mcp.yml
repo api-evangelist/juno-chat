@@ -1,8 +1,290 @@
-generated: '2026-09-28'
+generated: '2026-10-03'
 method: probed
 source: https://juno-health-tools.vercel.app/api/mcp
+status: published
+sources:
+- POST https://juno-health-tools.vercel.app/api/mcp initialize, tools/list and resources/list (2026-10-03, streamable-http,
+  text/event-stream)
+- https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MarshallBear1/juno-open-health-tools (active, version
+  1.1.0)
+- https://github.com/MarshallBear1/juno-open-health-tools (MIT source; app/README.md documentation)
+- 'https://doi.org/10.5281/zenodo.21730086 (DataCite: Juno Open Health Tools, Software, version 1.3.0, creators Marshall Gould
+  and Isaac Tolley)'
+- https://github.com/api-evangelist/juno-chat/pull/1 (provider PR, verified live 2026-09-28)
+server:
+  name: io.github.MarshallBear1/juno-open-health-tools
+  title: Juno Open Health Tools
+  server_info_name: Juno Health Tools
+  version: 1.1.0
+  protocol_version: '2025-06-18'
+  transport: streamable-http
+  url: https://juno-health-tools.vercel.app/api/mcp
+  capabilities:
+    resources:
+      listChanged: true
+    tools:
+      listChanged: true
+  repository: https://github.com/MarshallBear1/juno-open-health-tools
+  license: MIT
+  registry: Official MCP Registry, io.github.MarshallBear1/juno-open-health-tools, status active, published 2026-08-01
+  instructions: Before any tool call, disclose that Juno Health Tools transiently processes the submitted text without intentionally
+    storing it, ask whether the user wants to continue, and set consentConfirmed true only after explicit agreement. Do not
+    request or accept protected health information (PHI), names, contact details, record or insurance numbers, credentials,
+    provider documents, or other identifying data. Use only minimal user-authored observations. Do not diagnose, infer causes,
+    recommend treatment, or replace urgent care. Prefer data tools first and call render_appointment_brief once, after prepare_appointment_brief.
+auth:
+  methods:
+  - none
+  note: 'initialize, tools/list and resources/list answered 200 without credentials; each tool instead requires consentConfirmed:
+    true after the user explicitly agrees to transient processing.'
 deployment:
   mode: remote
   endpoint: https://juno-health-tools.vercel.app/api/mcp
-  auth: unknown
+  auth: none
   verified: probed
+  verification: '2026-10-03: POST initialize returned 200 text/event-stream with serverInfo Juno Health Tools 1.1.0 (protocol
+    2025-06-18); tools/list returned five tools and resources/list one UI resource. GET returns 405. An invented path on the
+    host returns a real 404.'
+tool_count: 5
+tools:
+- name: find_symptom_words
+  description: After explicit consent, organise only the user's non-identifying description into neutral sensation, timing,
+    pattern, and impact vocabulary. Do not accept PHI or infer a diagnosis or cause.
+  annotations:
+    readOnlyHint: true
+    destructiveHint: false
+    openWorldHint: false
+  inputSchema:
+    type: object
+    $schema: https://json-schema.org/draft/2020-12/schema
+    properties:
+      consentConfirmed:
+        type: boolean
+        const: true
+        description: Set to true only after the user explicitly agrees to transient processing of their non-identifying, user-authored
+          health notes. Do not submit PHI, medical-record identifiers, contact details, credentials, or provider documents.
+      description:
+        type: string
+        maxLength: 2000
+      bodyArea:
+        type: string
+        maxLength: 2000
+      timing:
+        type: string
+        maxLength: 2000
+      impact:
+        type: string
+        maxLength: 2000
+    required:
+    - consentConfirmed
+    - description
+- name: build_health_timeline
+  description: After explicit consent, sort only non-identifying, user-authored observations into a factual chronology while
+    preserving uncertainty. Do not accept PHI or invent dates or diagnoses.
+  annotations:
+    readOnlyHint: true
+    destructiveHint: false
+    openWorldHint: false
+  inputSchema:
+    type: object
+    $schema: https://json-schema.org/draft/2020-12/schema
+    properties:
+      consentConfirmed:
+        type: boolean
+        const: true
+        description: Set to true only after the user explicitly agrees to transient processing of their non-identifying, user-authored
+          health notes. Do not submit PHI, medical-record identifiers, contact details, credentials, or provider documents.
+      observations:
+        minItems: 1
+        maxItems: 50
+        type: array
+        items:
+          type: object
+          properties:
+            date:
+              type: string
+              maxLength: 80
+            observation:
+              type: string
+              maxLength: 2000
+            category:
+              type: string
+              maxLength: 120
+            impact:
+              type: string
+              maxLength: 1000
+            uncertainty:
+              type: string
+              maxLength: 500
+          required:
+          - observation
+    required:
+    - consentConfirmed
+    - observations
+- name: prepare_appointment_brief
+  description: After explicit consent, turn minimal non-identifying goals, changes, impact, user-stated medicines, and questions
+    into a concise appointment brief. Do not accept PHI or provide medical advice.
+  annotations:
+    readOnlyHint: true
+    destructiveHint: false
+    openWorldHint: false
+  inputSchema:
+    type: object
+    $schema: https://json-schema.org/draft/2020-12/schema
+    properties:
+      consentConfirmed:
+        type: boolean
+        const: true
+        description: Set to true only after the user explicitly agrees to transient processing of their non-identifying, user-authored
+          health notes. Do not submit PHI, medical-record identifiers, contact details, credentials, or provider documents.
+      mainGoal:
+        type: string
+        maxLength: 2000
+      changes:
+        default: []
+        maxItems: 25
+        type: array
+        items:
+          type: string
+          maxLength: 1000
+      impacts:
+        default: []
+        maxItems: 25
+        type: array
+        items:
+          type: string
+          maxLength: 1000
+      medicines:
+        default: []
+        maxItems: 25
+        type: array
+        items:
+          type: string
+          maxLength: 1000
+      questions:
+        default: []
+        maxItems: 25
+        type: array
+        items:
+          type: string
+          maxLength: 1000
+      detailsToBring:
+        default: []
+        maxItems: 25
+        type: array
+        items:
+          type: string
+          maxLength: 1000
+    required:
+    - consentConfirmed
+    - mainGoal
+- name: reflect_on_flare
+  description: After explicit consent, structure only non-identifying, user-authored before, during, and after observations;
+    turn suspected patterns into questions, not causal claims. Do not accept PHI.
+  annotations:
+    readOnlyHint: true
+    destructiveHint: false
+    openWorldHint: false
+  inputSchema:
+    type: object
+    $schema: https://json-schema.org/draft/2020-12/schema
+    properties:
+      consentConfirmed:
+        type: boolean
+        const: true
+        description: Set to true only after the user explicitly agrees to transient processing of their non-identifying, user-authored
+          health notes. Do not submit PHI, medical-record identifiers, contact details, credentials, or provider documents.
+      baselineBefore:
+        default: []
+        maxItems: 25
+        type: array
+        items:
+          type: string
+          maxLength: 1000
+      during:
+        default: []
+        maxItems: 25
+        type: array
+        items:
+          type: string
+          maxLength: 1000
+      recoveryAfter:
+        default: []
+        maxItems: 25
+        type: array
+        items:
+          type: string
+          maxLength: 1000
+      possiblePatterns:
+        default: []
+        maxItems: 25
+        type: array
+        items:
+          type: string
+          maxLength: 1000
+    required:
+    - consentConfirmed
+- name: render_appointment_brief
+  description: After the user's existing consent, render the non-identifying output of prepare_appointment_brief as an accessible
+    card. Call prepare_appointment_brief first; do not add PHI.
+  annotations:
+    readOnlyHint: true
+    destructiveHint: false
+    openWorldHint: false
+  inputSchema:
+    type: object
+    $schema: https://json-schema.org/draft/2020-12/schema
+    properties:
+      mainGoal:
+        type: string
+        maxLength: 2000
+      changes:
+        maxItems: 25
+        type: array
+        items:
+          type: string
+          maxLength: 1500
+      impacts:
+        maxItems: 25
+        type: array
+        items:
+          type: string
+          maxLength: 1500
+      medicines:
+        maxItems: 25
+        type: array
+        items:
+          type: string
+          maxLength: 1500
+      questions:
+        maxItems: 25
+        type: array
+        items:
+          type: string
+          maxLength: 1500
+      detailsToBring:
+        maxItems: 25
+        type: array
+        items:
+          type: string
+          maxLength: 1500
+      disclaimer:
+        type: string
+        maxLength: 2000
+      consentConfirmed:
+        type: boolean
+        const: true
+        description: Set to true only after the user explicitly agrees to transient processing of their non-identifying, user-authored
+          health notes. Do not submit PHI, medical-record identifiers, contact details, credentials, or provider documents.
+    required:
+    - mainGoal
+    - changes
+    - impacts
+    - medicines
+    - questions
+    - detailsToBring
+    - disclaimer
+    - consentConfirmed
+resources:
+- uri: ui://juno-health-tools/appointment-brief-v1.html
+  name: appointment-brief-card

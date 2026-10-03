@@ -1,7 +1,46 @@
-generated: '2026-09-28'
+generated: '2026-10-03'
 method: derived
-source: https://juno-health-tools.vercel.app/api/mcp
+source: mcp/juno-chat-mcp.yml (live tools/list 2026-10-03)
+description: Juno publishes no REST API or OpenAPI; each of the five MCP tools is MCP-only and transforms user-supplied, non-identifying
+  text, so no tool binds to a REST operation.
+surfaces:
+  openapi: none
+  mcp: https://juno-health-tools.vercel.app/api/mcp
 crosswalk:
-  - tool: none
-    rest: []
-    confidence: low
+- tool: find_symptom_words
+  rest: []
+  binding: mcp-only
+  confidence: high
+  note: No REST equivalent is published.
+- tool: build_health_timeline
+  rest: []
+  binding: mcp-only
+  confidence: high
+  note: No REST equivalent is published.
+- tool: prepare_appointment_brief
+  rest: []
+  binding: mcp-only
+  confidence: high
+  note: No REST equivalent is published.
+- tool: reflect_on_flare
+  rest: []
+  binding: mcp-only
+  confidence: high
+  note: No REST equivalent is published.
+- tool: render_appointment_brief
+  rest: []
+  binding: mcp-only
+  confidence: high
+  note: No REST equivalent is published.
+mcp_only:
+- find_symptom_words
+- build_health_timeline
+- prepare_appointment_brief
+- reflect_on_flare
+- render_appointment_brief
+rest_only: []
+coverage:
+  tools_named: 5
+  tools_bound: 0
+  mcp_only: 5
+  rest_operations_total: 0
