@@ -1,28 +1,26 @@
 ---
 kin_checks:
   slug: juno-chat
-  schema_version: 0.22.0
-  scored_at: '2026-09-21'
-  run_ts: 2026-09-21T233935
+  schema_version: 0.23.0
+  scored_at: '2026-10-03'
+  run_ts: 2026-10-03T024842
   note: Actionable checks (missed + partial) in `checks`, plus the ids that did not
-    apply in `na`. Everything else in rubric/scoring-0.22.0.yml was earned; counts
+    apply in `na`. Everything else in rubric/scoring-0.23.0.yml was earned; counts
     below let you verify that.
   counts:
-    total: 136
-    earned: 11
-    partial: 1
-    missed: 85
-    na: 39
+    total: 153
+    earned: 17
+    partial: 3
+    missed: 92
+    na: 41
   checks:
-  - id: multiple_apis
+  - id: leadership_present
     status: missed
-  - id: human_url_per_api
+  - id: multiple_apis
     status: missed
   - id: base_url_per_api
     status: missed
   - id: well_known_published
-    status: missed
-  - id: llms_txt_published
     status: missed
   - id: apis_json_self_hosted
     status: missed
@@ -82,8 +80,6 @@ kin_checks:
     status: missed
   - id: portal_present
     status: missed
-  - id: documentation_present
-    status: missed
   - id: api_reference_present
     status: missed
   - id: getting_started_present
@@ -121,8 +117,6 @@ kin_checks:
     status: missed
   - id: reg_oauth_scopes
     status: missed
-  - id: reg_authentication_documented
-    status: missed
   - id: reg_vulnerability_disclosure
     status: missed
   - id: reg_compliance_published
@@ -136,6 +130,30 @@ kin_checks:
   - id: reg_smart_configuration
     status: missed
   - id: reg_certification_signal
+    status: missed
+  - id: reg_sbom
+    status: missed
+  - id: reg_support_lifetime
+    status: missed
+  - id: reg_accessibility_conformance
+    status: missed
+  - id: reg_global_privacy_control
+    status: missed
+  - id: reg_data_subject_request
+    status: missed
+  - id: reg_subprocessors
+    status: missed
+  - id: reg_data_residency
+    status: missed
+  - id: reg_incident_notification
+    status: missed
+  - id: reg_age_assurance
+    status: missed
+  - id: reg_notice_and_action
+    status: missed
+  - id: reg_transparency_report
+    status: missed
+  - id: reg_exit_assistance
     status: missed
   - id: reg_mandate_verified
     status: missed
@@ -152,10 +170,6 @@ kin_checks:
   - id: agentic_access
     status: missed
   - id: reversibility_documented
-    status: missed
-  - id: mcp_server
-    status: missed
-  - id: auth_clarity
     status: missed
   - id: idempotency
     status: missed
@@ -189,6 +203,14 @@ kin_checks:
     status: partial
     earned: 2.5
     detail: pointer liveness 0.5
+  - id: mcp_server
+    status: partial
+    earned: 4.8
+    detail: 'grade: documented'
+  - id: auth_clarity
+    status: partial
+    earned: 9.0
+    detail: 'grade: served'
   na:
   - asyncapi_3_x
   - channels_defined
@@ -217,10 +239,12 @@ kin_checks:
   - os_contribution_guide
   - os_releases
   - os_security_policy
+  - reg_ai_transparency
   - reg_camara_conformance
   - reg_entitlement_terms
   - reg_fapi_profile
   - reg_pci_sca
+  - reg_training_data_summary
   - reg_write_surface
   - response_coverage
   - security_applied

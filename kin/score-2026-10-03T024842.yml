@@ -1,31 +1,29 @@
-# Kin Score artifact — juno-chat — 2026-08-28T221322
+# Kin Score artifact — juno-chat — 2026-10-03T024842
 # The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
 ---
 kin_score:
   slug: juno-chat
-  schema_version: 0.15.1
-  scored_at: '2026-08-28'
-  run_ts: 2026-08-28T221322
-  composite: 10.3
-  band: minimal
+  schema_version: 0.23.0
+  scored_at: '2026-10-03'
+  run_ts: 2026-10-03T024842
+  composite: 14.7
+  band: emerging
   facets:
-    discoverability: 50.0
+    discoverability: 68.3
     contract_quality: 0.0
-    governance: 0.0
-    operational_transparency: 0.0
-    developer_ergonomics: 0.0
-    commercial_clarity: 27.6
     contract_governance: 0.0
+    operational_transparency: 0.0
+    developer_ergonomics: 9.5
     access_clarity: 27.6
   agent_readiness:
-    score: 0.0
-    band: human-only
+    score: 9.9
+    band: agent-aware
     dimensions:
       spec_presence: false
       agentic_access: false
       reversibility_documented: false
-      mcp_server: false
-      auth_clarity: false
+      mcp_server: documented
+      auth_clarity: served
       idempotency: false
       error_semantics: false
       openapi_examples: false
@@ -44,5 +42,7 @@ kin_score:
     applies: true
     regime: Health
     regime_id: health
-    score: 17.5
+    score: 15.6
     matched_via: tags
+  provenance:
+    mcp: first-party
