@@ -2,23 +2,21 @@
 kin_checks:
   slug: juno-chat
   schema_version: 0.23.0
-  scored_at: '2026-10-03'
-  run_ts: 2026-10-03T024842
+  scored_at: '2026-10-11'
+  run_ts: 2026-10-11T110117
   note: Actionable checks (missed + partial) in `checks`, plus the ids that did not
     apply in `na`. Everything else in rubric/scoring-0.23.0.yml was earned; counts
     below let you verify that.
   counts:
     total: 153
-    earned: 17
+    earned: 19
     partial: 3
-    missed: 92
+    missed: 90
     na: 41
   checks:
   - id: leadership_present
     status: missed
   - id: multiple_apis
-    status: missed
-  - id: base_url_per_api
     status: missed
   - id: well_known_published
     status: missed
@@ -71,8 +69,6 @@ kin_checks:
   - id: security_disclosure
     status: missed
   - id: webhooks_advertised
-    status: missed
-  - id: github_org_present
     status: missed
   - id: roadmap_present
     status: missed
