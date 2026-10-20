@@ -1,0 +1,688 @@
+{
+  "endpoint": "https://juno-health-tools.vercel.app/api/mcp",
+  "captured": "2026-10-20",
+  "method": "initialize + tools/list (anonymous, no tool called; roadmap#992)",
+  "protocol_version": "2025-06-18",
+  "server_info": {
+    "name": "Juno Health Tools",
+    "version": "1.1.0"
+  },
+  "result": {
+    "tools": [
+      {
+        "name": "find_symptom_words",
+        "title": "Find symptom words",
+        "description": "Organises a non-identifying, user-authored sensation description into neutral sensation, timing, pattern and impact vocabulary. Requires explicit consent for transient processing. PHI and diagnostic inference are outside its scope.",
+        "inputSchema": {
+          "type": "object",
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "consentConfirmed": {
+              "type": "boolean",
+              "const": true,
+              "description": "Set to true only after the user explicitly agrees to transient processing of their non-identifying, user-authored health notes. Do not submit PHI, medical-record identifiers, contact details, credentials, or provider documents."
+            },
+            "description": {
+              "type": "string",
+              "maxLength": 2000
+            },
+            "bodyArea": {
+              "type": "string",
+              "maxLength": 2000
+            },
+            "timing": {
+              "type": "string",
+              "maxLength": 2000
+            },
+            "impact": {
+              "type": "string",
+              "maxLength": 2000
+            }
+          },
+          "required": [
+            "consentConfirmed",
+            "description"
+          ]
+        },
+        "annotations": {
+          "title": "Find symptom words",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "openWorldHint": false
+        },
+        "_meta": {
+          "openai/toolInvocation/invoking": "Finding clearer words…",
+          "openai/toolInvocation/invoked": "Word prompts ready."
+        },
+        "outputSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "originalDescription": {
+              "type": "string",
+              "maxLength": 2000
+            },
+            "prompts": {
+              "type": "object",
+              "properties": {
+                "sensation": {
+                  "maxItems": 30,
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "timing": {
+                  "maxItems": 30,
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "pattern": {
+                  "maxItems": 30,
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "impact": {
+                  "maxItems": 30,
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "sensation",
+                "timing",
+                "pattern",
+                "impact"
+              ],
+              "additionalProperties": false
+            },
+            "starterSentence": {
+              "type": "string",
+              "maxLength": 10000
+            },
+            "disclaimer": {
+              "type": "string",
+              "maxLength": 2000
+            }
+          },
+          "required": [
+            "originalDescription",
+            "prompts",
+            "starterSentence",
+            "disclaimer"
+          ],
+          "additionalProperties": false
+        }
+      },
+      {
+        "name": "build_health_timeline",
+        "title": "Build health timeline",
+        "description": "Sorts non-identifying, user-authored observations into a factual chronology while preserving supplied dates and uncertainty. Requires explicit consent for transient processing. PHI and diagnosis are outside its scope.",
+        "inputSchema": {
+          "type": "object",
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "consentConfirmed": {
+              "type": "boolean",
+              "const": true,
+              "description": "Set to true only after the user explicitly agrees to transient processing of their non-identifying, user-authored health notes. Do not submit PHI, medical-record identifiers, contact details, credentials, or provider documents."
+            },
+            "observations": {
+              "minItems": 1,
+              "maxItems": 50,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "date": {
+                    "type": "string",
+                    "maxLength": 80
+                  },
+                  "observation": {
+                    "type": "string",
+                    "maxLength": 2000
+                  },
+                  "category": {
+                    "type": "string",
+                    "maxLength": 120
+                  },
+                  "impact": {
+                    "type": "string",
+                    "maxLength": 1000
+                  },
+                  "uncertainty": {
+                    "type": "string",
+                    "maxLength": 500
+                  }
+                },
+                "required": [
+                  "observation"
+                ]
+              }
+            }
+          },
+          "required": [
+            "consentConfirmed",
+            "observations"
+          ]
+        },
+        "annotations": {
+          "title": "Build health timeline",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "openWorldHint": false
+        },
+        "_meta": {
+          "openai/toolInvocation/invoking": "Organising the timeline…",
+          "openai/toolInvocation/invoked": "Timeline organised."
+        },
+        "outputSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "timeline": {
+              "maxItems": 50,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "date": {
+                    "type": "string",
+                    "maxLength": 80
+                  },
+                  "observation": {
+                    "type": "string",
+                    "maxLength": 2000
+                  },
+                  "category": {
+                    "type": "string",
+                    "maxLength": 120
+                  },
+                  "impact": {
+                    "type": "string",
+                    "maxLength": 1000
+                  },
+                  "uncertainty": {
+                    "type": "string",
+                    "maxLength": 500
+                  }
+                },
+                "required": [
+                  "date",
+                  "observation",
+                  "category",
+                  "impact",
+                  "uncertainty"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "changePoints": {
+              "maxItems": 6,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "date": {
+                    "type": "string",
+                    "maxLength": 80
+                  },
+                  "observation": {
+                    "type": "string",
+                    "maxLength": 2000
+                  },
+                  "category": {
+                    "type": "string",
+                    "maxLength": 120
+                  },
+                  "impact": {
+                    "type": "string",
+                    "maxLength": 1000
+                  },
+                  "uncertainty": {
+                    "type": "string",
+                    "maxLength": 500
+                  }
+                },
+                "required": [
+                  "date",
+                  "observation",
+                  "category",
+                  "impact",
+                  "uncertainty"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "disclaimer": {
+              "type": "string",
+              "maxLength": 2000
+            }
+          },
+          "required": [
+            "timeline",
+            "changePoints",
+            "disclaimer"
+          ],
+          "additionalProperties": false
+        }
+      },
+      {
+        "name": "prepare_appointment_brief",
+        "title": "Prepare appointment brief",
+        "description": "Structures non-identifying goals, changes, impacts, user-stated medicines and questions into an appointment brief. Requires explicit consent for transient processing. PHI, diagnosis and treatment advice are outside its scope.",
+        "inputSchema": {
+          "type": "object",
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "consentConfirmed": {
+              "type": "boolean",
+              "const": true,
+              "description": "Set to true only after the user explicitly agrees to transient processing of their non-identifying, user-authored health notes. Do not submit PHI, medical-record identifiers, contact details, credentials, or provider documents."
+            },
+            "mainGoal": {
+              "type": "string",
+              "maxLength": 2000
+            },
+            "changes": {
+              "default": [],
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1000
+              }
+            },
+            "impacts": {
+              "default": [],
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1000
+              }
+            },
+            "medicines": {
+              "default": [],
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1000
+              }
+            },
+            "questions": {
+              "default": [],
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1000
+              }
+            },
+            "detailsToBring": {
+              "default": [],
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1000
+              }
+            }
+          },
+          "required": [
+            "consentConfirmed",
+            "mainGoal"
+          ]
+        },
+        "annotations": {
+          "title": "Prepare appointment brief",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "openWorldHint": false
+        },
+        "_meta": {
+          "openai/toolInvocation/invoking": "Preparing the brief…",
+          "openai/toolInvocation/invoked": "Brief prepared."
+        },
+        "outputSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "mainGoal": {
+              "type": "string",
+              "maxLength": 2000
+            },
+            "changes": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "impacts": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "medicines": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "questions": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "detailsToBring": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "disclaimer": {
+              "type": "string",
+              "maxLength": 2000
+            }
+          },
+          "required": [
+            "mainGoal",
+            "changes",
+            "impacts",
+            "medicines",
+            "questions",
+            "detailsToBring",
+            "disclaimer"
+          ],
+          "additionalProperties": false
+        }
+      },
+      {
+        "name": "reflect_on_flare",
+        "title": "Reflect on a flare",
+        "description": "Structures non-identifying before, during and recovery observations, presenting suspected patterns as questions rather than causes. Requires explicit consent for transient processing. PHI is outside its scope.",
+        "inputSchema": {
+          "type": "object",
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "consentConfirmed": {
+              "type": "boolean",
+              "const": true,
+              "description": "Set to true only after the user explicitly agrees to transient processing of their non-identifying, user-authored health notes. Do not submit PHI, medical-record identifiers, contact details, credentials, or provider documents."
+            },
+            "baselineBefore": {
+              "default": [],
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1000
+              }
+            },
+            "during": {
+              "default": [],
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1000
+              }
+            },
+            "recoveryAfter": {
+              "default": [],
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1000
+              }
+            },
+            "possiblePatterns": {
+              "default": [],
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1000
+              }
+            }
+          },
+          "required": [
+            "consentConfirmed"
+          ]
+        },
+        "annotations": {
+          "title": "Reflect on a flare",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "openWorldHint": false
+        },
+        "_meta": {
+          "openai/toolInvocation/invoking": "Structuring the reflection…",
+          "openai/toolInvocation/invoked": "Reflection structured."
+        },
+        "outputSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "baselineBefore": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "during": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "recoveryAfter": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "possiblePatternsToObserve": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "disclaimer": {
+              "type": "string",
+              "maxLength": 2000
+            }
+          },
+          "required": [
+            "baselineBefore",
+            "during",
+            "recoveryAfter",
+            "possiblePatternsToObserve",
+            "disclaimer"
+          ],
+          "additionalProperties": false
+        }
+      },
+      {
+        "name": "render_appointment_brief",
+        "title": "Render appointment brief",
+        "description": "Renders a supplied, complete, non-identifying appointment brief as an accessible card. Requires explicit consent for transient processing. Preserves the supplied fields and disclaimer; PHI is outside its scope.",
+        "inputSchema": {
+          "type": "object",
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "mainGoal": {
+              "type": "string",
+              "maxLength": 2000
+            },
+            "changes": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "impacts": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "medicines": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "questions": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "detailsToBring": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "disclaimer": {
+              "type": "string",
+              "maxLength": 2000
+            },
+            "consentConfirmed": {
+              "type": "boolean",
+              "const": true,
+              "description": "Set to true only after the user explicitly agrees to transient processing of their non-identifying, user-authored health notes. Do not submit PHI, medical-record identifiers, contact details, credentials, or provider documents."
+            }
+          },
+          "required": [
+            "mainGoal",
+            "changes",
+            "impacts",
+            "medicines",
+            "questions",
+            "detailsToBring",
+            "disclaimer",
+            "consentConfirmed"
+          ]
+        },
+        "annotations": {
+          "title": "Render appointment brief",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "openWorldHint": false
+        },
+        "_meta": {
+          "ui": {
+            "resourceUri": "ui://juno-health-tools/appointment-brief-v3.html"
+          },
+          "openai/outputTemplate": "ui://juno-health-tools/appointment-brief-v3.html",
+          "openai/toolInvocation/invoking": "Rendering the brief…",
+          "openai/toolInvocation/invoked": "Brief ready."
+        },
+        "outputSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "mainGoal": {
+              "type": "string",
+              "maxLength": 2000
+            },
+            "changes": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "impacts": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "medicines": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "questions": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "detailsToBring": {
+              "maxItems": 25,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "disclaimer": {
+              "type": "string",
+              "maxLength": 2000
+            }
+          },
+          "required": [
+            "mainGoal",
+            "changes",
+            "impacts",
+            "medicines",
+            "questions",
+            "detailsToBring",
+            "disclaimer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    ]
+  }
+}
