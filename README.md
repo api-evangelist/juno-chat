@@ -64,6 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Juno Chat is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Juno (junocompanion.com), operated by SharedGenes, Inc., is a Y Combinator-backed (P26) consumer digital-health startup building an AI personal health assistant for the 1B+ people living with chronic illness. The Juno mobile app (iOS and Android) builds a longitudinal health profile through conversation, biometrics, and medical history to deliver personalized symptom guidance, automated symptom tracking by text or voice, trigger-pattern identification, and appointment-ready reports for clinicians. It supports conditions including fibromyalgia, long COVID, POTS, ME/CFS, EDS, endometriosis, lupus, and MS, and is informed by research from Oxford and UCL plus 1,000+ patient interviews. Founded in 2025 by Marshall Gould (CEO) and Isaac Tolley (CTO); HIPAA-aligned infrastructure with no health data sold. Juno also publishes Juno Open Health Tools, an MIT-licensed remote MCP server at https://juno-health-tools.vercel.app/api/mcp with five read-only, consent-gated tools that turn a user's non-identifying health notes into non-diagnostic appointment-preparation material; it is listed in the official MCP Registry and archived on Zenodo (DOI 10.5281/zenodo.21730086). Juno publishes no REST API or SDK.
 
-Backed by: y-combinator
+**Areas:** Company · Digital Health · Chronic Illness · AI Health Assistant · Symptom Tracking · Consumer Health · Mobile App · Y Combinator
+
+## Juno Chat on APIs.io
+
+Everything profiled for Juno Chat is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/juno-chat/](https://apis.io/providers/juno-chat/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Juno Open Health Tools MCP Server](https://apis.io/apis/juno-chat/juno-open-health-tools-mcp-server/) — Remote streamable-HTTP MCP server (serverInfo Juno Health Tools 1.1.0) with five read-only, consent-gated tools (find_symptom_words, build_health_timeline,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (2)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Juno Open Health Tools](https://apis.io/servers/juno-chat/io-github-marshallbear1-juno-open-health-tools/)
+- [Moved to /providers/juno-chat/](https://apis.io/servers/juno-chat/juno-chat-mcp-yml/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Juno Chat Domain Security](https://apis.io/security/juno-chat/juno-chat-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://junocompanion.com/)
+- [Documentation](https://github.com/MarshallBear1/juno-open-health-tools/blob/main/app/README.md)
+- [Sign up](https://apps.apple.com/app/juno-chronic-illness-support/id6749455368)
+- [Blog](https://junocompanion.com/blog)
+- [Terms of service](https://junocompanion.com/terms)
+- [Privacy policy](https://junocompanion.com/privacy)
+
+## API Evangelist rating
+
+**Kin Score 16.3** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 76.7 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 27.6 |
+
+**Agent readiness 9.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 15.6** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/juno-chat/](https://apis.io/providers/juno-chat/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Juno Chat: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/juno-chat/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
